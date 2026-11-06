@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f8f6">
+    <title>Share your reason — Have your say</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Vote home">
+            <span class="brand-mark" aria-hidden="true">✓</span>
+            <span>Have your say</span>
+        </a>
+        <a class="header-link" href="index.html">Home</a>
+    </header>
+
+    <main class="page-main">
+        <div class="page-content">
+            <section class="hero" aria-labelledby="page-title">
+                <p class="eyebrow">We value your perspective</p>
+                <h1 id="page-title">Not voting today?</h1>
+                <p class="page-copy">If you’d like, let us know why. Your feedback helps complete this demo.</p>
+            </section>
+
+            <section class="panel">
+                <form data-submission="reason" data-success-url="reason-submitted.html">
+                    <label class="field-label" for="reason">Your reason</label>
+                    <textarea class="reason-textarea" id="reason" name="reason" rows="5" maxlength="1000" required></textarea>
+                    <button class="button" type="submit">Send reason <span aria-hidden="true">→</span></button>
+                    <p class="form-status" data-status role="status" aria-live="polite"></p>
+                </form>
+                <a class="back-link" href="index.html">← Back to options</a>
+                <p class="notice">
+                    <span class="notice-icon" aria-hidden="true">i</span>
+                    <span>Demo only: your response will be saved to the connected database. Do not include personal or sensitive information.</span>
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">A simple demo voting experience</footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
